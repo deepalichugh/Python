@@ -3,6 +3,12 @@ class Node:
         self.data = data
         self.next = None
 
+def printLL(head):
+    while head is not None:
+        print(str(head.data), " -> ", end = "")
+        head = head.next
+    return 
+
 
 def takeInput():
     inp = [int(ele) for ele in input().split()]
@@ -22,4 +28,4 @@ def takeInput():
             currNode.next = newNode
     return head
 
-print(takeInput())
+printLL(takeInput())
